@@ -1,0 +1,49 @@
+/*  -- GERAL  -- */
+body{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+
+/*  -- HEADER  -- */
+.header{
+    background-color: var(--claro1);
+    height: 60px;
+}
+
+.header-container{
+    max-width: 1440px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo-img{
+    height: 45px;
+    
+}
+
+.header-container nav ul{
+    display: flex;
+    flex-direction: row;
+
+}
+
+/*  -- MAIN - HOME  -- */
+
+
+/*  -- MAIN - SOBRE  -- */
+
+
+/*  -- MAIN - PROJETOS  -- */
+
+
+/*  -- MAIN - SERVIÇOS  -- */
+
+
+/*  -- MAIN - ORÇAMENTO  -- */
+
+
+/*  -- FOOTER  -- */
+
