@@ -1,0 +1,111 @@
+/* menu hamburguer - começando pela configuração da linha do meio*/
+.topo .menu {
+    display: none;
+    width: 60px;
+    height: 60px;
+
+    align-self: flex-end;  /* deixar o menu sempre à direita*/
+}
+
+.topo nav label{
+    display: flex;
+    flex-direction: column; /*mostrar o nav abaixo do menu hamburguer*/
+}
+
+.topo input {
+    display: none;
+    /* apaga o checkbox do input*/
+}
+
+.topo .hamburguer {
+    background-color: #666;
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 1px;
+    top: 29px;
+    left: 15px;
+    transition: 0.2s ease-in-out;
+}
+
+
+/*linhas de cima e de baixo do menu hamburguer*/
+.topo .hamburguer:before {
+    top: -8px; /* sobre -10px em relação a onde ele está*/
+}
+
+.topo .hamburguer:after {
+    bottom: -8px; /* desce -10px em relação a onde ele está*/
+}
+
+.topo .hamburguer:before,
+.topo .hamburguer:after {
+    background-color: #666;
+    position: relative;
+    content: "";
+    display: block;
+    width: 100%; /* vai estar sempre a 100% da largura e altura do menu*/
+    height: 100%;
+    transition: 0.2s ease-in-out;
+}
+
+/*--- menu hamburguer clicado  - quando clicar no hamburguer, o hamburguer vira um X*/
+
+.topo input:checked~label .hamburguer{
+    transform: rotate(45deg);
+}
+
+.topo input:checked~label .hamburguer:before {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.topo input:checked~label .hamburguer:after {
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+
+/* --- menu hamburguer vai aparecer só quando a tela for no máimo 900px*/
+@media(max-width: 900px) {
+    .topo .menu {
+        display: block;
+    }
+
+    .topo nav ul { /* oculta os itens do menu quando for clicado*/
+        display: none;
+    }
+
+    
+/* --- quando o hamburguer for clicado, a lista ul volta a aparecer(os ítens do menu) */
+.topo input:checked ~ul{
+    display: block;
+}
+
+.topo nav{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    z-index: 1; /*o nav vai aparecer por cima de todo o conteúdo da página*/
+}
+
+/*"quadradinho branco dos itens do menu*/
+.topo nav ul{ 
+    width: 150px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.952);
+}
+
+.topo nav ul a{
+    display: block; /*para as alterações aparecerem*/
+    text-align: center;
+    margin: 5px 0;
+}
+
+.topo nav ul li a:hover{
+    color: #fff;
+    font-weight: 700;
+    background-color: var(--claro1);
+    transition: 0.2s;
+}
+}

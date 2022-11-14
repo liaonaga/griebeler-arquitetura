@@ -4,36 +4,130 @@ body{
     font-weight: 400;
 }
 
-
-/*  -- HEADER  -- */
-.header{
-    background-color: var(--claro1);
-    height: 60px;
+.limita-secao{
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
-.header-container{
-    max-width: 1440px;
+
+/*  -- HEADER  -- */
+.topo{
+    background-color: var(--claro1);
+    width: 100%;
+}
+
+.topo .limita-secao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: 60px;
+    padding: 0 25px;
+    margin: 0 auto;
+
+}
+
+.topo-logo-img {
+    height: 40px;
+}
+
+.topo input{
+    display: none;
+}
+
+.topo nav ul{
+    display: flex;
+}
+
+.topo nav ul li a{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.2s;
+
+    color: #666;
+}
+
+.topo nav ul li a:hover{
+    color: #666;
+    font-weight: 600;
+    background-color: var(--claro3);
+}
+
+/* .topo nav ul li a:hover{
+    font-weight: 700;
+    color: #fff;
+} */
+
+/* --- menu hamburguer vai aparecer só quando a tela for no máimo 900px*/
+@media(max-width: 900px) {
+    .topo .menu {
+        display: block;
+    }
+
+    .topo nav ul { /* oculta os itens do menu quando for clicado*/
+        display: none;
+    }
+}
+/*  -- MAIN - HOME  -- */
+#home{
+    grid-area: hero;
+    height: 70vh;
+    background: url(/src/imagens/01.Alpha.png) center center no-repeat;
+    background-size: cover;
 
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.capa{
+    width: 80vw;
+    text-align: center;
+
+    color: #fff;
+}
+
+.capa h1{
+    font-family: 'Public Sans', sans-serif;
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+
+.capa p{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+/*  -- MAIN - SOBRE  -- */
+#sobre h2, .filosofia-texto h3{
+    font-family: 'Public Sans', sans-serif;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#sobre h2{
+    padding-top: 30px;
+}
+
+.filosofia, .sobre {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.header .logo-img{
-    height: 45px;
-    
+
+.filosofia img, .sobre-texto{
+    width: 60%;
 }
 
-.header-container nav ul{
-    display: flex;
-    flex-direction: row;
-
-}
-
-/*  -- MAIN - HOME  -- */
-
-
-/*  -- MAIN - SOBRE  -- */
 
 
 /*  -- MAIN - PROJETOS  -- */
@@ -46,4 +140,3 @@ body{
 
 
 /*  -- FOOTER  -- */
-
