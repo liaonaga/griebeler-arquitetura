@@ -11,19 +11,15 @@
 
     <link rel="stylesheet" href="src/css/estilo.css">
     <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="src/css/menu-hamburguer.css">
     <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/menu-hamburguer.css">
 </head>
 
 <body>
-    <header class="topo">
-        <div class="limita-secao">
-            <div class="topo-logo">
-                <a href="/">
-                    <img class="topo-logo-img" src="src/imagens/logo horizontal.png" alt="Logo Griebeler Arquitetura">
-                </a>
-            </div>
-            <nav>
+    <header class="menu">
+        <div class="container">
+            <a class="menu-logo" href="/"><img src="src/imagens/logo horizontal.png" alt="Logo Griebeler Arquitetura"></a>
+            <nav class="menu-nav">
                 <input type="checkbox" name="" id="menu-hamburguer">
                 <label for="menu-hamburguer">
                     <div class="menu">
@@ -44,16 +40,16 @@
 
     <main>
         <section id="home">
-            <div class="capa">
-                <h1>Ambientes que trazem mais qualidade de vida</h1>
+            <div class="intro">
+                <h1>Ambientes que <br> trazem mais qualidade de vida</h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus consectetur asperiores,nesciunt </p>
             </div>
         </section>
 
-        <section id="sobre" class="limita-secao">
+        <section id="sobre" class="container">
             <h2>Nós te acompanhamos desde o conceito <br> até a realização do seu projeto</h2>
-            <div class="filosofia">
-                <div class="filosofia-texto">
+            <div class="filosofia container">
+                <div class="filosofia-item">
                     <h3>Filosofia</h3>
                     <p>Somos uma empresa especializada em projetos residenciais e temos como objetivo apresentar as
                         melhores soluções que atendam os três pilares fundamentais da construção: funcionalidade,
@@ -61,124 +57,108 @@
                         Nos guiamos por uma comunicação aberta e constante com nossos clientes, de forma a
                         compreender suas necessidades e transformar a vida das famílias que acreditam em nós,
                         através da arquitetura.</p>
-                        
-
-                    </div>
+                </div>
+                <div class="filosofia-item">
                     <img src="src/imagens/projeto 3d pb.png" alt="Imagem de um projeto em 3D preto e branco">
+                </div>
             </div>
+        </section>
+        <section class="sobre container">
+            <div class="sobre-item">
+                <img src="src/imagens/foto pri.jpg" alt="foto da arquiteta Priscylla Griebeler">
+            </div>
+            <div class="sobre-item">
+                <h3>Sobre Griebeler Arquitetura</h3>
+                <p>A Griebeler Arquitetura foi fundada em 2019, com foco no desenvolvimento de projetos de
+                    arquitetura, interiores e iluminação residenciais, desde reformas a novas construções.
+                    Acreditamos que a casa deve refletir a essência da família.
 
-            <section class="sobre">
-                <div class="sobre-img">
-                    <img src="src/imagens/foto pri.jpg" alt="foto da arquiteta Priscylla Griebeler">
-                </div>
-                <div class="sobre-texto">
-                    <h3>Sobre Griebeler Arquitetura</h3>
-                    <p>A Griebeler Arquitetura foi fundada em 2019, com foco no desenvolvimento de projetos de
-                        arquitetura, interiores e iluminação residenciais, desde reformas a novas construções.
-                        Acreditamos que a casa deve refletir a essência da família.
+                    Por isso, nossa primeira reunião é focada em conhecer melhor os clientes e compreender todas
+                    as necessidades do dia a dia, indo além das solicitações iniciais para cada ambiente.
+                    Nossa missão é criar ambientes bonitos, relaxantes e aconchegantes, que sejam um local agradável para convivência e descanso.
+                </p>
+                <p>Siga o nosso trabalho no Instagram: </p>
+                <button>
+                    <a href="https://www.instagram.com/griebelerarquitetura/" target="_blank"><i class="fab fa-instagram"></i>Siga o nosso Instagram</a></button>
+            </div>
+        </section>
 
-                        Por isso, nossa primeira reunião é focada em conhecer melhor os clientes e compreender todas
-                        as necessidades do dia a dia, indo além das solicitações iniciais para cada ambiente.
-                        Nossa missão é criar ambientes bonitos, relaxantes e aconchegantes, que sejam um local agradável para convivência e descanso.
-                    </p>
-                    <p>Siga o nosso trabalho no Instagram: </p>
-                    <button>
-                        <a href="https://www.instagram.com/griebelerarquitetura/" target="_blank"><i
-                                class="fab fa-instagram"></i>Siga o nosso Instagram</a></button>
-                </div>
-            </section>
-            <div class="projetos-destaque">
+        <section id="projetos">
+            <div class="container">
                 <h3>Projetos em Destaque</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa, possimus assumenda. Dolores rerum recusandae eum. Vero a praesentium, ducimus fuga reiciendis obcaecati.</p>
             </div>
-
-        </section>
-        <section id="projetos">
-            <div class="projetos-img">
-                <figure class="projeto">
+            <div class="projetos-container">
+                <div class="projeto-card">
                     <img class="imagem-projeto" src="src/imagens/01-.Alpha.png" alt="Projeto home office"
                         title="Projeto home office">
-                    <figcaptionh class="texto-projeto">
-                        <p class="nome-projeto">Home office</p>
-                    </figcaptionh>
-                </figure>
-                <figure class="projeto">
-                    <img class="imagem-projeto" src="src/imagens/01.Alpha.png" alt="cozinha cinza"
-                        title="cozinha cinza">
-                    <figcaptionh class="texto-projeto">
+                    <p class="nome-projeto">Home office</p>
+                </div>
+                <div class="projeto-card">
+                    <img class="imagem-projeto" src="src/imagens/01.Alpha.png" alt="cozinha cinza" title="cozinha cinza">
                         <p class="nome-projeto">Cozinha cinza</p>
-                    </figcaptionh>
-                </figure>
-                <figure class="projeto">
+                </div>
+                <div class="projeto-card">
                     <img class="imagem-projeto" src="src/imagens/01.png" alt="banheiro branco" title="banheiro branco">
-                    <figcaptionh class="texto-projeto">
                         <p class="nome-projeto">Lavabo</p>
                     </figcaptionh>
                 </figure>
-                <figure class="projeto">
+                <div class="projeto-card">
                     <img class="imagem-projeto" src="src/imagens/RENDER_03_.png" alt="Lavanderia" title="Lavanderia">
-                    <figcaptionh class="texto-projeto">
-                        <p class="nome-projeto">Lavanderia</p>
-                    </figcaptionh>
-                </figure>
-                <figure class="projeto">
+                    <p class="nome-projeto">Lavanderia</p>
+                </div>
+                <div class="projeto-card">
                     <img class="imagem-projeto" src="src/imagens/03_.png" alt="Cantinho do café" title="Cantinho do café">
-                    <figcaptionh class="texto-projeto">
-                        <p class="nome-projeto">Cantinho do café</p>
-                    </figcaptionh>
-                </figure>
+                    <p class="nome-projeto">Cantinho do café</p>
+                </div>
             </div>
 
-            <div class="setas">
+            <div class="setas container">
                 <a href="#" id="btn-voltar" class="seta btn-voltar">voltar</a>
                 <a href="#" id="btn-avancar" class="seta btn-avancar">avançar</a>
             </div>
         </section>
 
         <section id="servicos">
-            <div class="servicos-texto">
-                <h3>Como podemos te ajudar:</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, accusantium fugiat dignissimos quod, iste nisi aspernatur commodi doloribus ullam, minus tenetur voluptas atque totam quae ad rem asperiores sapiente? Reprehenderit. </p>
+            <div class="container">
+                    <h3>Como podemos te ajudar:</h3>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, accusantium fugiat dignissimos quod, iste nisi aspernatur commodi doloribus ullam, minus tenetur voluptas atque totam quae ad rem asperiores sapiente? Reprehenderit. </p>
+                <div class="servico-item">
+                    <i class="fa-solid fa-house"></i>
+                    <i class="fa-solid fa-couch"></i>
+                    <h4>Projeto Completo
+                        Arquitetura e Interiores</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium saepe accusantium quidem neque enim nam est sapiente corrupti.</p>
+                    <button>Saiba mais</button>
+                </div>
+                <div class="servico-item">
+                    <i class="fa-solid fa-house"></i>
+                    <h4>Projeto de Arquitetura</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium saepe accusantium quidem neque enim nam est sapiente corrupti.</p>
+                    <button>Saiba mais</button>
+                </div>
+                <div class="servico-item">
+                    <i class="fa-solid fa-couch"></i>
+                    <h4>Projeto de Interiores</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium saepe accusantium quidem neque enim nam est sapiente corrupti.</p>
+                    <button>Saiba mais</button>
+                </div>
+                <div class="servico-item">
+                    <i class="fa-solid fa-lamp"></i>
+                    <h4>Consultoria de Decoração</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium saepe accusantium quidem
+                        neque enim nam est sapiente corrupti.</p>
+                    <button>Saiba mais</button>
+                </div>
+                <button>Veja mais serviços</button>
             </div>
-
-            <div class="servico">
-                <i class="fa-solid fa-house"></i>
-                <i class="fa-solid fa-couch"></i>
-                <h4>Projeto Completo
-                    Arquitetura e Interiores</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium saepe accusantium quidem neque enim nam est sapiente corrupti.</p>
-                <button>Saiba mais</button>
-            </div>
-
-            <div class="servico">
-                <i class="fa-solid fa-house"></i>
-                <h4>Projeto de Arquitetura</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium saepe accusantium quidem neque enim nam est sapiente corrupti.</p>
-                <button>Saiba mais</button>
-            </div>
-
-            <div class="servico">
-                <i class="fa-solid fa-couch"></i>
-                <h4>Projeto de Interiores</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium saepe accusantium quidem neque enim nam est sapiente corrupti.</p>
-                <button>Saiba mais</button>
-            </div>
-
-            <div class="servico">
-                <i class="fa-solid fa-lamp"></i>
-                <h4>Consultoria de Decoração</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium saepe accusantium quidem
-                    neque enim nam est sapiente corrupti.</p>
-                <button>Saiba mais</button>
-            </div>
-            <button>Veja mais serviços</button>
         </section>
         <section class="contato" id="contato">
-            <div class="contato">
+            <div class="contato container">
                 <h3>Entre em contato</h3>
                 <div class="form">
                     <form method="post"
-                        action="https://www.devmedia.com.br/codigos/missao/front-end/agencia-de-viagens/" required>
+                        action="/" required>
                         <label for="nome"></label>
                         <input id="nome" type="text" name="nome" placeholder="Nome Completo" required>
                         <label for="email"></label>
@@ -197,24 +177,22 @@
                     <a href="https://www.instagram.com/griebelerarquitetura/" target="_blank"><i
                             class="fab fa-instagram"></i> @griebelerarquitetura</a>
                 </div>
-
+            </div>
         </section>
     </main>
     <footer>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">projetos</a></li>
-                <li><a href="#servicos">serviços</a></li>
-                <li><a href="#orcamento">Orçamento</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="footer">
-            <a href="#home">
-                <img src="src/imagens/logo 1.png" alt="">
-            </a>
+        <div class="footer-container">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">projetos</a></li>
+                    <li><a href="#servicos">serviços</a></li>
+                    <li><a href="#orcamento">Orçamento</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <a class="menu-logo" href="#home"><img src="src/imagens/logo horizontal.png" alt="Logo Griebeler Arquitetura"></a>
         </div>
     </footer>
 </body>

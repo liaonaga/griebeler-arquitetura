@@ -4,7 +4,7 @@ body{
     font-weight: 400;
 }
 
-.limita-secao{
+.container{
     max-width: 1024px;
     margin: 0 auto;
 }
@@ -14,9 +14,10 @@ body{
 .topo{
     background-color: var(--claro1);
     width: 100%;
+    padding: 10px 0;
 }
 
-.topo .limita-secao {
+.topo-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
