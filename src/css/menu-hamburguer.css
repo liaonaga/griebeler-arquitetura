@@ -1,5 +1,5 @@
 /* menu hamburguer - começando pela configuração da linha do meio*/
-.topo .menu {
+.header .menu-nav {
     display: none;
     width: 60px;
     height: 60px;
@@ -7,17 +7,17 @@
     align-self: flex-end;  /* deixar o menu sempre à direita*/
 }
 
-.topo nav label{
+.menu-nav label{
     display: flex;
     flex-direction: column; /*mostrar o nav abaixo do menu hamburguer*/
 }
 
-.topo input {
+.menu-nav input {
     display: none;
     /* apaga o checkbox do input*/
 }
 
-.topo .hamburguer {
+.menu-nav .hamburguer {
     background-color: #666;
     position: relative;
     display: block;
@@ -30,16 +30,16 @@
 
 
 /*linhas de cima e de baixo do menu hamburguer*/
-.topo .hamburguer:before {
+.menu-nav .hamburguer:before {
     top: -8px; /* sobre -10px em relação a onde ele está*/
 }
 
-.topo .hamburguer:after {
+.menu-nav .hamburguer:after {
     bottom: -8px; /* desce -10px em relação a onde ele está*/
 }
 
-.topo .hamburguer:before,
-.topo .hamburguer:after {
+.menu-nav .hamburguer:before,
+.menu-nav .hamburguer:after {
     background-color: #666;
     position: relative;
     content: "";
@@ -51,16 +51,16 @@
 
 /*--- menu hamburguer clicado  - quando clicar no hamburguer, o hamburguer vira um X*/
 
-.topo input:checked~label .hamburguer{
+.menu-nav input:checked~label .hamburguer{
     transform: rotate(45deg);
 }
 
-.topo input:checked~label .hamburguer:before {
+.menu-nav input:checked~label .hamburguer:before {
     transform: rotate(90deg);
     top: 0;
 }
 
-.topo input:checked~label .hamburguer:after {
+.menu-nav input:checked~label .hamburguer:after {
     transform: rotate(90deg);
     bottom: 0;
 }
@@ -68,21 +68,21 @@
 
 /* --- menu hamburguer vai aparecer só quando a tela for no máimo 900px*/
 @media(max-width: 900px) {
-    .topo .menu {
+    .header.menu-nav {
         display: block;
     }
 
-    .topo nav ul { /* oculta os itens do menu quando for clicado*/
+    .menu-nav ul { /* oculta os itens do menu quando for clicado*/
         display: none;
     }
 
     
 /* --- quando o hamburguer for clicado, a lista ul volta a aparecer(os ítens do menu) */
-.topo input:checked ~ul{
+.menu-nav input:checked ~ul{
     display: block;
 }
 
-.topo nav{
+.menu-nav {
     position: absolute;
     top: 0;
     right: 20px;
@@ -90,19 +90,19 @@
 }
 
 /*"quadradinho branco dos itens do menu*/
-.topo nav ul{ 
+.menu-nav ul{ 
     width: 150px;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.952);
 }
 
-.topo nav ul a{
+.menu-nav ul a{
     display: block; /*para as alterações aparecerem*/
     text-align: center;
     margin: 5px 0;
 }
 
-.topo nav ul li a:hover{
+.menu-nav ul li a:hover{
     color: #fff;
     font-weight: 700;
     background-color: var(--claro1);

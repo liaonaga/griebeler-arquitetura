@@ -11,39 +11,39 @@ body{
 
 
 /*  -- HEADER  -- */
-.topo{
+.header{
     background-color: var(--claro1);
     width: 100%;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
-.topo-container {
+.container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    width: 100%;
-    min-height: 60px;
-    padding: 0 25px;
-    margin: 0 auto;
+  margin: 0 auto;
+   max-width: 1200px;
 
 }
 
-.topo-logo-img {
-    height: 40px;
+.menu-logo img {
+    width: 250px;
 }
 
-.topo input{
+.menu-nav {
+    flex: 1;
+    align-self: center;
+}
+
+.menu-nav input{
     display: none;
 }
 
-.topo nav ul{
+.menu-nav ul{
     display: flex;
 }
 
-.topo nav ul li a{
+.menu-nav ul li a{
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 1.10em;
     font-weight: 500;
     padding: 10px 20px;
     border-radius: 50px;
@@ -52,83 +52,16 @@ body{
     color: #666;
 }
 
-.topo nav ul li a:hover{
-    color: #666;
-    font-weight: 600;
-    background-color: var(--claro3);
-}
-
-/* .topo nav ul li a:hover{
+.menu-nav ul li a:hover{
     font-weight: 700;
     color: #fff;
-} */
+}
 
 /* --- menu hamburguer vai aparecer só quando a tela for no máimo 900px*/
-@media(max-width: 900px) {
-    .topo .menu {
-        display: block;
-    }
 
-    .topo nav ul { /* oculta os itens do menu quando for clicado*/
-        display: none;
-    }
-}
 /*  -- MAIN - HOME  -- */
-#home{
-    grid-area: hero;
-    height: 70vh;
-    background: url(/src/imagens/01.Alpha.png) center center no-repeat;
-    background-size: cover;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-}
-
-.capa{
-    width: 80vw;
-    text-align: center;
-
-    color: #fff;
-}
-
-.capa h1{
-    font-family: 'Public Sans', sans-serif;
-    padding-bottom: 20px;
-    font-size: 25px;
-}
-
-.capa p{
-    font-size: 16px;
-    font-family: 'Inter', sans-serif;
-}
 
 /*  -- MAIN - SOBRE  -- */
-#sobre h2, .filosofia-texto h3{
-    font-family: 'Public Sans', sans-serif;
-    padding-bottom: 20px;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-#sobre h2{
-    padding-top: 30px;
-}
-
-.filosofia, .sobre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.filosofia img, .sobre-texto{
-    width: 60%;
-}
-
 
 
 /*  -- MAIN - PROJETOS  -- */
