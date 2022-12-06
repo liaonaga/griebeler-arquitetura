@@ -5,7 +5,6 @@ body{
 }
 
 .container{
-    max-width: 1024px;
     display: flex;
     margin: 0 auto;
     max-width: 1200px;
@@ -30,8 +29,8 @@ body{
 }
 
 .menu-nav {
+    display: flex;
     flex: 1;
-    align-self: center;
 }
 
 .menu-nav input{
@@ -40,7 +39,9 @@ body{
 
 .menu-nav ul{
     display: flex;
+    align-items: center;
 }
+
 
 .menu-nav ul li a{
     text-transform: uppercase;
@@ -51,6 +52,12 @@ body{
     transition: 0.2s;
 
     color: #666;
+}
+
+.btn-padrao{
+    background-color: var(--claro3);
+    padding: 10px 20px;
+    border-radius: 50px;
 }
 
 .menu-nav ul li a:hover{
@@ -127,7 +134,22 @@ body{
 }
 
 
-@media (max-width: 1100px){
+.sticky {
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  transition: all 0.3s;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.sticky .navbar {
+  padding: 20px 0;
+}
+
+@media (max-width: 1200px){
     
     .menu-nav ul{
         display: none;  //ocultar o menu-nav
@@ -181,7 +203,7 @@ align-self: flex-end;    }
 /* --- menu hamburguer vai aparecer só quando a tela for no máimo 900px*/
 
 /*  -- MAIN - INTRO  -- */
-.intro{
+.capa{
     background: url(../imagens/01.Alpha.png) center center no-repeat;
     background-size: cover;
     width: 100vw;
@@ -192,16 +214,16 @@ align-self: flex-end;    }
     justify-content: center;
 }
 
-.intro h1 {
+.capa h1 {
 	text-transform: uppercase;
 	font-size: 2em;
 }
 
-.intro-container{
+.capa-container{
     max-width: 600px;
 }
 
-.intro h1::after {
+.capa h1::after {
 	content: '';
 	display: block;
 	width: 20px;
@@ -209,7 +231,7 @@ align-self: flex-end;    }
 	background: #fff;
 	margin: 10px auto;
 }
-.intro p {
+.capa p {
 	font-style: italic;
 	font-size: 1.125em;
 }
@@ -217,13 +239,256 @@ align-self: flex-end;    }
 /*  -- MAIN - SOBRE  -- */
 
 
+.conteudo-container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.intro {
+    border-bottom: 2px solid var(--claro1);
+    padding: 30px 10px;
+    max-width: 960px;
+    margin: 30px auto;
+}
+
+.sobre {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sobre-info {
+    flex: 2 1 400px;
+}
+
+.sobre-info h3 {
+    font-size: 1.5em;
+    margin-bottom: .5em;
+}
+
+.sobre-info p{
+    font-size: 1.25em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+}
+.sobre-img {
+	width: 460px;
+    height: 350px;
+    padding: 30px ;
+    margin: 0 auto;
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.sobre-img img {
+    max-height: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+button{
+    text-decoration: none;
+}
+.sobre a button{
+	border: none;
+    background-color: var(--claro1);
+	text-decoration: none;
+	margin: 20px auto;
+	font-size: 1.125em;
+	font-weight: 500;
+	text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.222);
+	padding: 10px 30px;
+    color: var(--cinza2);
+    cursor: pointer;
+}
+
+.sobre a button:hover {
+    background-color: var(--escuro1);
+    color: #fff;
+}
+
+
+/*  -- MAIN - SECAO  -- */
+
+.secao {
+    text-align: center;
+    padding-top: 30px;
+    margin: 30px auto;
+    max-width: 600px;
+}
+
+.secao h3{
+    font-size: 2em;
+    margin-bottom: .5em;
+}
+
+.secao p{
+    font-size: 1.25em;
+    margin-bottom: .5em;
+    color: var(--cinza1);
+    line-height: 1.4;
+}
+
 /*  -- MAIN - PROJETOS  -- */
+.projetos-container{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    flex: 1 1 100px;
+    margin: 0 auto;
+}
+
+.projeto-card {
+    margin: 10px;
+    
+}
+
+.imagem-projeto {
+    max-width: 220px;
+}
+
+
 
 
 /*  -- MAIN - SERVIÇOS  -- */
+
+.servicos{
+    background-color: var(--claro3);
+    padding: 0 0 30px;
+    text-align: center;
+    line-height: 1.4;
+
+}
+.servicos-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servico-card{
+    margin: 5px;
+    flex: 1 1 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.servico-card:hover{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.122);
+}
+
+
+.servicos h4{
+    font-size: 1.25em;
+    margin-bottom: .5em;
+    text-align: left;
+}
+
+.servicos p{
+    font-size: 1em;
+    margin-bottom: .5em;
+    color: var(--cinza1);
+    text-align: left;
+
+}
+
+
+.servicos button{
+    width: 100%;
+    max-height: 25px;
+	border: none;
+    background-color: var(--claro3);
+	text-decoration: none;
+	margin-top: 20px;
+	font-size: 1em;
+	font-weight: 500;
+	text-transform: uppercase;
+    border-radius: 10px;
+	padding: 5px;
+    color: var(--cinza2);
+    cursor: pointer;
+}
+
+.servicos button:hover {
+    background-color: var(--claro1);
+	font-weight: 700;
+}
+
+.servicos .btn-padrao{
+    width: 100%;
+    max-width: 300px;
+    max-height: 25px;
+	border: none;
+    background-color: var(--claro3);
+	text-decoration: none;
+	margin-top: 20px;
+	font-size: 1em;
+	font-weight: 500;
+	text-transform: uppercase;
+    border-radius: 10px;
+	padding: 5px;
+    color: var(--cinza2);
+    cursor: pointer;
+}
+
+.servicos button:hover {
+    background-color: var(--claro1);
+	font-weight: 700;
+}
 
 
 /*  -- MAIN - ORÇAMENTO  -- */
 
 
 /*  -- FOOTER  -- */
+.footer{
+    display: flex;
+    margin: 60px auto;
+    max-width: 960px;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--cinza1);
+}
+
+.footer p{
+
+}
+
+
+@media(max-width: 960px){
+    .sobre-info, .secao, .footer, .contato{
+        display: flex;
+        padding: 15px;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    
+    .servicos h4{
+        font-size: 1.25em;
+        margin-bottom: .5em;
+        text-align: center;
+    }
+    
+    .servicos p{
+        font-size: 1em;
+        margin-bottom: .5em;
+        color: var(--cinza1);
+        text-align: center;
+    
+    }
+    .servicos .btn-padrao{
+        width: 100%;
+    }
+    
+}
